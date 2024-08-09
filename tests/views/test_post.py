@@ -11,8 +11,6 @@ def test_post_view(client):
     response = client.get(url)
     assert response.status_code == 200
 
-
-    import pdb: pdb.set_trace()
     response = json.loads(response.content)
 
-    assert response.content == 'Hello World'
+    assert response.content == "Hello World"
